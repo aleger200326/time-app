@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="timer-card" aria-label="Таймер фокусировки">
+      <div class="topbar">
+        <div>
+          <h1>Focus Timer</h1>
+          <p id="modeDescription">Загружаю режимы...</p>
+        </div>
+        <span class="session-count" id="sessionCount">0 сессий</span>
+      </div>
+
+      <nav class="app-nav" aria-label="Разделы">
+        <button class="is-active" id="timerTab" type="button">Таймер</button>
+        <button id="achievementsTab" type="button">Ачивки</button>
+      </nav>
+
+      <section class="view-panel" id="timerPanel" aria-label="Экран таймера">
+        <div class="mode-tabs" id="modeTabs" aria-label="Режимы таймера"></div>
+
+        <div class="dial" aria-live="polite">
+          <svg viewBox="0 0 220 220" aria-hidden="true">
+            <circle class="track" cx="110" cy="110" r="96"></circle>
+            <circle class="progress" id="progressRing" cx="110" cy="110" r="96"></circle>
+          </svg>
+          <div class="dial-readout">
+            <strong id="timeText">25:00</strong>
+            <span id="statusText">Готов к старту</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="primary" id="startPauseButton" type="button">Старт</button>
+          <button id="resetButton" type="button">Сброс</button>
+        </div>
+
+        <section class="settings" aria-label="Настройки таймера">
+          <label>
+            Минуты
+            <input id="minutesInput" type="number" min="0" max="120" value="25">
+          </label>
+          <label>
+            Секунды
+            <input id="secondsInput" type="number" min="0" max="59" value="0">
+          </label>
+          <label class="toggle-row">
+            Звук по окончании
+            <input id="soundToggle" type="checkbox" checked>
+          </label>
+        </section>
+      </section>
+
+      <section class="view-panel achievements-panel" id="achievementsPanel" aria-label="Ачивки таймера" hidden>
+        <div class="rank-console">
+          <div>
+            <span class="console-label">System rank</span>
+            <strong id="rankName">E-RANK</strong>
+          </div>
+          <div class="rank-meter" aria-hidden="true">
+            <span id="rankMeterFill"></span>
+          </div>
+          <p id="rankProgress">Открой первую ачивку, чтобы начать восхождение.</p>
+        </div>
+
+        <div class="achievement-summary">
+          <strong id="unlockedCount">0/0</strong>
+          <span>ачивок открыто</span>
+        </div>
+
+        <div class="achievement-list" id="achievementList"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
