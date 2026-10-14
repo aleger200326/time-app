@@ -53,7 +53,7 @@ time-app/
 npx serve . -l 3000
 ```
 
-4. Откройте [aleger200326.github.io/time-app/](aleger200326.github.io/time-app/).
+4. Откройте [https://aleger200326.github.io/time-app/](https://aleger200326.github.io/time-app/).
 
 Используйте HTTP-сервер: при запуске index.html двойным щелчком браузер может заблокировать загрузку JSON-файлов.
 
