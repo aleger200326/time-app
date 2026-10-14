@@ -1,0 +1,61 @@
+[
+  {
+    "id": "first_gate",
+    "rank": "E",
+    "title": "Первый вход в подземелье",
+    "description": "Заверши любую одну сессию таймера.",
+    "type": "totalSessions",
+    "target": 1
+  },
+  {
+    "id": "focus_hunter",
+    "rank": "D",
+    "title": "Охотник фокуса",
+    "description": "Заверши режим «Фокус».",
+    "type": "modeCount",
+    "mode": "focus",
+    "target": 1
+  },
+  {
+    "id": "break_recovery",
+    "rank": "C",
+    "title": "Восстановление маны",
+    "description": "Заверши короткий перерыв.",
+    "type": "modeCount",
+    "mode": "short",
+    "target": 1
+  },
+  {
+    "id": "deep_gate",
+    "rank": "B",
+    "title": "Глубокие врата",
+    "description": "Заверши режим «Глубоко».",
+    "type": "modeCount",
+    "mode": "deep",
+    "target": 1
+  },
+  {
+    "id": "triple_clear",
+    "rank": "A",
+    "title": "Тройная зачистка",
+    "description": "Заверши любые 3 сессии.",
+    "type": "totalSessions",
+    "target": 3
+  },
+  {
+    "id": "all_gates",
+    "rank": "A+",
+    "title": "Повелитель расписания",
+    "description": "Пройди все три режима хотя бы по одному разу.",
+    "type": "allModes",
+    "target": 3
+  },
+  {
+    "id": "s_rank_focus",
+    "rank": "S",
+    "title": "Пробуждение S-ранга",
+    "description": "Заверши 7 сессий и закрепи привычку.",
+    "type": "totalSessions",
+    "target": 7
+  }
+]
