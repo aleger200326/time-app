@@ -273,8 +273,8 @@ function applyCustomDuration() {
 async function loadPresets() {
   try {
     const [presetResponse, achievementResponse] = await Promise.all([
-      fetch("data/presets.json"),
-      fetch("data/achievements.json"),
+      fetch("./presets.json"),
+      fetch("./achievements.json"),
     ]);
     if (!presetResponse.ok) throw new Error("Не удалось загрузить data/presets.json");
     if (!achievementResponse.ok) throw new Error("Не удалось загрузить data/achievements.json");
